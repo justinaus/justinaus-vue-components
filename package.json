@@ -1,6 +1,6 @@
 {
-  "name": "@justinaus/vue-components2",
-  "version": "0.1.0",
+  "name": "@justinaus/vue-components",
+  "version": "0.1.10",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
