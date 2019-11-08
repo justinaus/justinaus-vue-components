@@ -1,4 +1,4 @@
 module.exports = {
   // options...
-  css: { extract: false }
+  // css: { extract: false }
 }
