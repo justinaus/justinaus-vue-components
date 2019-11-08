@@ -1,21 +1,9 @@
-<template>
-  <div>
-    <input class="test" 
-      v-model="input"
-      :type="type" 
-      :placeholder="placeholder" 
-      :maxLength="maxLength"
-      :disabled="isDisabled"
-      @focus="onFocus"
-      @blur="onBlur"
-      ref="input"
-      v-on:keyup.13="onKeyUpEnter" />
-  </div>
-</template>
-<script>
-export default {
+const inputMixin = {
   props: {
-    value: String,
+    value: {
+      type: String,
+      default: ''
+    },
     type: {
       type: String,
       default: 'text'
@@ -30,16 +18,6 @@ export default {
       type: Boolean,
       default: false
     },
-  },
-  computed: {
-    input: {
-      get() {
-        return this.value;
-      },
-      set(value) {
-        this.$emit("update:value", value);
-      }
-    }
   },
   mounted() {
     if( this.isFocusOnMount ) {
@@ -64,10 +42,5 @@ export default {
     }
   },
 }
-</script>
 
-<style scoped>
-  .test {
-    border: 1px solid red;
-  }
-</style>
+export default inputMixin
