@@ -1,4 +1,3 @@
-// import Vue from 'vue'
 import Banner from './components/Banner.vue'
 import Input from './components/input/Input.vue'
 import InputAuto1000Comma from './components/input/InputAuto1000Comma.vue'

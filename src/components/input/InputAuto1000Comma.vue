@@ -21,6 +21,7 @@ import { addCommaForMoney } from '@/utils/stringUtils'
 import { changeTo1000comma } from 'jodash'
 
 export default {
+  name: 'InputAuto1000Comma',
   mixins: [
     inputMixin
   ],

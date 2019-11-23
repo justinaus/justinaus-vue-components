@@ -16,6 +16,7 @@
 import inputMixin from './inputMixin'
 
 export default {
+  name: 'Input',
   mixins: [
     inputMixin
   ],
@@ -31,3 +32,13 @@ export default {
   },
 }
 </script>
+
+<style>
+.inputContainer {
+  width: 100%;
+}
+.inputContainer input {
+  padding: 10px;
+  width: 100%;
+}
+</style>
