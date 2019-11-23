@@ -1,6 +1,6 @@
 {
   "name": "@justinaus/vue-components",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "jodash": "^1.0.5",
     "vue": "^2.6.10"
   },
   "devDependencies": {
