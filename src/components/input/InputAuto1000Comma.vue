@@ -1,20 +1,24 @@
 <template>
-  <input class="test test2" 
-    v-model="input"
-    :type="type" 
-    :placeholder="placeholder" 
-    :maxLength="maxLength"
-    :disabled="isDisabled"
-    @focus="onFocus"
-    @blur="onBlur"
-    ref="input"
-    v-on:keyup.13="onKeyUpEnter" />
+  <div class="inputContainer">
+    <input 
+      v-model="input"
+      :type="type" 
+      :placeholder="placeholder" 
+      :maxLength="maxLength"
+      :disabled="isDisabled"
+      @focus="onFocus"
+      @blur="onBlur"
+      ref="input"
+      v-on:keyup.13="onKeyUpEnter" />
+  </div>
 </template>
 <script>
 import inputMixin from './inputMixin'
 
 import { getCanConvertNumber } from '@/utils/numberUtils'
 import { addCommaForMoney } from '@/utils/stringUtils'
+
+import { changeTo1000comma } from 'jodash'
 
 export default {
   mixins: [
@@ -23,7 +27,7 @@ export default {
   computed: {
     input: {
       get() {
-        const validText = this.getValidText( this.value );
+        const validText = changeTo1000comma( this.value );
 
         if( validText !== this.value ) {
           this.$emit("update:value", validText );
@@ -42,15 +46,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-  .test {
-    border: 1px solid green;
-  }
-</style>
-
-<style>
-  .test2 {
-    padding: 10px;
-  }
-</style>

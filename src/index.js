@@ -1,15 +1,18 @@
 // import Vue from 'vue'
 import Banner from './components/Banner.vue'
-import Input from './components/Input.vue'
+import Input from './components/input/Input.vue'
+import InputAuto1000Comma from './components/input/InputAuto1000Comma.vue'
 
 const components = [
   Banner,
-  Input
+  Input,
+  InputAuto1000Comma
 ]
 
 export {
   Banner,
-  Input
+  Input,
+  InputAuto1000Comma
 }
 
 export const Plugin = {
@@ -24,5 +27,6 @@ export const Plugin = {
 export default {
   Plugin,
   Banner,
-  Input
+  Input,
+  InputAuto1000Comma
 };
