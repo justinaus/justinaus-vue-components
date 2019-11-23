@@ -1,23 +1,29 @@
 <template>
   <div id="app">
-    <!-- <Banner>
-      This is a banner!
-    </Banner> -->
-    <Input
-      :value.sync="text"
-      @onEnterKey="onEnterKey" />
+    <div class="container">
+      <Input
+        :value.sync="text"
+        @onEnterKey="onEnterKey" />
+      <InputAuto1000Comma
+        :value.sync="text"
+        @onEnterKey="onEnterKey" />
+    </div>
   </div>
 </template>
 
 <script>
 // import Banner from './components/Banner.vue'
-import Input from './components/Input.vue'
+import Input from './components/input/Input.vue'
+import InputAuto1000Comma from './components/input/InputAuto1000Comma.vue'
+
+import './App.css'
 
 export default {
   name: 'app',
   components: {
     // Banner,
-    Input
+    Input,
+    InputAuto1000Comma
   },
   data() {
     return {
@@ -31,3 +37,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .container {
+    width: 500px;
+  }
+</style>
