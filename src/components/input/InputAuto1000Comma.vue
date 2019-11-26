@@ -15,9 +15,6 @@
 <script>
 import inputMixin from './inputMixin'
 
-import { getCanConvertNumber } from '@/utils/numberUtils'
-import { addCommaForMoney } from '@/utils/stringUtils'
-
 import { changeTo1000comma } from 'jodash'
 
 export default {
