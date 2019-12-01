@@ -32,7 +32,11 @@
     "extends": [
       "plugin:vue/essential"
     ],
-    "rules": {},
+    "rules": {
+      "no-unused-vars": "off",
+      "vue/no-unused-components": "off",
+      "no-console": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
